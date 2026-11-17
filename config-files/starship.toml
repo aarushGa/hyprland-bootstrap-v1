@@ -1,0 +1,24 @@
+add_newline = false
+
+format = """
+[](#ffffff)$username[](fg:#ffffff bg:#2b2b2b)\
+$directory[](fg:#2b2b2b bg:#555555)\
+$git_branch[](fg:#555555)\
+$character"""
+
+[username]
+show_always = true
+format = "[ 󰚌 $user ](bg:#ffffff fg:#000000)"
+
+[directory]
+truncation_length = 3
+home_symbol = "~"
+format = "[ 󰉋 $path ](bg:#2b2b2b fg:#ffffff)"
+
+[git_branch]
+symbol = " "
+format = "[ $symbol$branch ](bg:#555555 fg:#ffffff)"
+
+[character]
+success_symbol = "[❯](bold #ffffff)"
+error_symbol = "[❯](bold #b0b0b0)"

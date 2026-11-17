@@ -1,0 +1,19 @@
+[Default Applications]
+text/x-lua=code-oss.desktop
+text/plain=code-oss.desktop
+application/x-zerosize=dev.zed.Zed.desktop
+x-scheme-handler/postman=Postman.desktop
+
+[Added Associations]
+text/x-lua=dev.zed.Zed.desktop;code-oss.desktop;
+text/plain=libreoffice-writer.desktop;code-oss.desktop;
+application/x-zerosize=code-oss.desktop;dev.zed.Zed.desktop;
+text/html=code-oss.desktop;firefox.desktop;dev.zed.Zed.desktop;
+text/x-shellscript=code-oss.desktop;kitty-open.desktop;
+image/svg+xml=org.kde.krita.svg.desktop;firefox.desktop;
+text/javascript=code-oss.desktop;dev.zed.Zed.desktop;
+text/css=code-oss.desktop;dev.zed.Zed.desktop;
+image/jpeg=firefox.desktop;org.kde.gwenview.desktop;
+application/pdf=firefox.desktop;libreoffice-draw.desktop;kcm_printer_manager.desktop;
+image/png=firefox.desktop;
+text/x-chdr=code-oss.desktop;

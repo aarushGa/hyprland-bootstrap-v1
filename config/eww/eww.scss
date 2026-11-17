@@ -1,0 +1,106 @@
+/* ═══════════════════════════════
+   CINEMATIC MUSIC PLAYER
+   ═══════════════════════════════ */
+
+.music-container {
+    background: transparent;
+    padding: 10px;
+}
+
+
+/* ─────────────────────────────
+   NOW PLAYING
+   ───────────────────────────── */
+
+.music-label {
+    font-family: "Noto Sans";
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    opacity: 0.45;
+
+    margin-bottom: 4px;
+}
+
+
+/* ─────────────────────────────
+   LINE
+   ───────────────────────────── */
+
+.music-line {
+    font-family: "JetBrains Mono";
+    font-size: 9px;
+
+    opacity: 0.18;
+
+    margin-bottom: 12px;
+}
+
+
+/* ─────────────────────────────
+   SONG TITLE
+   ───────────────────────────── */
+
+.music-title {
+    font-family: "Noto Sans";
+    font-size: 25px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    opacity: 0.9;
+
+    margin-bottom: 2px;
+}
+
+
+/* ─────────────────────────────
+   ARTIST
+   ───────────────────────────── */
+
+.music-artist {
+    font-family: "Noto Sans";
+    font-size: 15px;
+    font-weight: 300;
+
+    letter-spacing: 3px;
+
+    opacity: 0.45;
+
+    margin-bottom: 18px;
+}
+
+
+/* ─────────────────────────────
+   CONTROLS
+   ───────────────────────────── */
+
+.music-controls {
+    margin-top: 3px;
+}
+
+
+.music-button {
+    font-family: "Noto Sans";
+    font-size: 25px;
+    font-weight: 300;
+
+    min-width: 25px;
+
+    opacity: 0.45;
+
+    transition: 200ms;
+}
+
+
+.music-button:hover {
+    opacity: 1;
+}
+
+
+.play-button {
+    font-size: 18px;
+    opacity: 0.8;
+}

@@ -1,0 +1,175 @@
+/******************************************************************************
+ * Rofi Theme - Minimal Monochrome
+ * Premium Monochrome (No Icons)
+ ******************************************************************************/
+
+* {
+    font: "JetBrains Mono Nerd Font 12";
+
+    bg-col:         rgba(0, 0, 0, 100%);
+    bg-col-light:   rgba(17, 17, 17, 100%);
+    border-col:     rgba(255, 255, 255, 100%);
+    selected-col:   rgba(17, 17, 17, 100%);
+
+    fg-col:         rgba(255, 255, 255, 100%);
+    fg-muted:       rgba(102, 102, 102, 100%);
+
+    background-color: transparent;
+    text-color: @fg-col;
+
+    normal-background: transparent;
+    normal-foreground: @fg-col;
+
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: @fg-col;
+
+    selected-normal-background: @selected-col;
+    selected-normal-foreground: @fg-col;
+
+    active-background: transparent;
+    active-foreground: @fg-col;
+
+    selected-active-background: @selected-col;
+    selected-active-foreground: @fg-col;
+
+    urgent-background: transparent;
+    urgent-foreground: @fg-col;
+
+    selected-urgent-background: @selected-col;
+    selected-urgent-foreground: @fg-col;
+
+    spacing: 0;
+    separatorcolor: transparent;
+}
+
+/* --------------------------------------------------------- */
+/* Window                                                    */
+/* --------------------------------------------------------- */
+
+window {
+    background-color: @bg-col;
+
+    border: 1px;
+    border-color: @border-col;
+
+    border-radius: 20px;
+
+    width: 24%;
+
+    padding: 24px;
+}
+
+/* --------------------------------------------------------- */
+/* Layout                                                    */
+/* --------------------------------------------------------- */
+
+mainbox {
+    border: 0;
+    padding: 0;
+    spacing: 16px;
+}
+
+/* --------------------------------------------------------- */
+/* Search Bar                                                */
+/* --------------------------------------------------------- */
+
+inputbar {
+    children: [ entry ];
+
+    padding: 12px;
+
+    background-color: @bg-col-light;
+
+    border: 1px;
+    border-color: @border-col;
+
+    border-radius: 14px;
+}
+
+entry {
+    text-color: @fg-col;
+
+    placeholder: "Search...";
+    placeholder-color: @fg-muted;
+
+    cursor: text;
+}
+
+/* --------------------------------------------------------- */
+/* App List                                                  */
+/* --------------------------------------------------------- */
+
+listview {
+    lines: 6;
+    fixed-height: false;
+
+    spacing: 5px;
+
+    scrollbar: false;
+
+    border: 0;
+
+    padding: 4px 0px 0px;
+
+    dynamic: true;
+    cycle: true;
+}
+
+/* --------------------------------------------------------- */
+/* Entries                                                   */
+/* --------------------------------------------------------- */
+
+element {
+    padding: 10px 12px;
+
+    border-radius: 14px;
+
+    background-color: transparent;
+    text-color: @fg-col;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+
+    vertical-align: 0.5;
+}
+
+/* --------------------------------------------------------- */
+/* Selected Entry                                            */
+/* --------------------------------------------------------- */
+
+element.selected.normal {
+    background-color: @selected-col;
+    text-color: @fg-col;
+}
+
+element.selected.active {
+    background-color: @selected-col;
+    text-color: @fg-col;
+}
+
+element.selected.urgent {
+    background-color: @selected-col;
+    text-color: @fg-col;
+}
+
+/* --------------------------------------------------------- */
+/* Misc                                                      */
+/* --------------------------------------------------------- */
+
+prompt {
+    enabled: false;
+}
+
+textbox-prompt-colon {
+    enabled: false;
+}
+
+mode-switcher {
+    enabled: false;
+}
+
+message {
+    enabled: false;
+}

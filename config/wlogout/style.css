@@ -1,0 +1,108 @@
+/* ------------------------------
+   Monochrome Wlogout
+--------------------------------*/
+
+* {
+    background-image: none;
+    transition: all 0.25s cubic-bezier(.25,.8,.25,1);
+    box-shadow: none;
+}
+
+window {
+    background-image: url("/home/aarush/Downloads/wallpapers/wlogout.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dark blurred panel */
+grid {
+    background-color: rgba(0, 0, 0, 0.72);
+    margin: 100px 500px;
+    padding: 24px;
+
+    border-radius: 50px;
+
+    border: 2px solid rgba(255,255,255,0.12);
+}
+
+/* ------------------------------
+   Buttons
+--------------------------------*/
+
+button {
+    color: #ffffff;
+
+    background-color: transparent;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+
+    border: 2px solid transparent;
+    border-radius: 40px;
+
+    min-width: 180px;
+    min-height: 180px;
+
+    margin: 10px;
+    outline: none;
+}
+
+/* Hover */
+
+button:hover {
+    background-color: rgba(255,255,255,0.08);
+
+    border: 2px solid rgba(255,255,255,0.85);
+
+    background-size: 40%;
+}
+
+/* Focus */
+
+button:focus {
+    background-color: rgba(255,255,255,0.08);
+
+    border: 2px solid rgba(255,255,255,0.85);
+
+    background-size: 40%;
+}
+
+/* Pressed */
+
+button:active {
+    background-color: rgba(255,255,255,0.15);
+
+    border: 2px solid #ffffff;
+}
+
+/* ------------------------------
+   Individual Buttons
+--------------------------------*/
+
+#lock,
+#logout,
+#reboot,
+#shutdown {
+    border-radius: 40px;
+}
+
+/* ------------------------------
+   Icons
+--------------------------------*/
+
+#lock {
+    background-image: url("/home/aarush/.config/wlogout/icons/lock_white.png");
+}
+
+#logout {
+    background-image: url("/home/aarush/.config/wlogout/icons/logout_white.png");
+}
+
+#reboot {
+    background-image: url("/home/aarush/.config/wlogout/icons/reboot_white.png");
+}
+
+#shutdown {
+    background-image: url("/home/aarush/.config/wlogout/icons/shutdown_white.png");
+}

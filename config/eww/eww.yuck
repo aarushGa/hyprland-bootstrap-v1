@@ -1,0 +1,81 @@
+(defpoll music_title
+  :interval "2s"
+  "playerctl metadata --format '{{title}}' 2>/dev/null || echo 'Nothing playing'")
+
+(defpoll music_artist
+  :interval "2s"
+  "playerctl metadata --format '{{artist}}' 2>/dev/null || echo ''")
+
+(defpoll music_status
+  :interval "1s"
+  "playerctl status 2>/dev/null || echo 'Stopped'")
+
+(defwindow music-player
+  :monitor 0
+
+  :geometry (geometry
+    :x "55px"
+    :y "45px"
+    :width "420px"
+    :height "220px"
+    :anchor "bottom right")
+
+  :stacking "overlay"
+  :focusable false
+  :exclusive false
+  :namespace "music-player"
+
+  (box
+    :class "music-container"
+    :orientation "v"
+    :halign "end"
+    :valign "end"
+
+    ;; LABEL
+    (label
+      :class "music-label"
+      :halign "end"
+      :text "NOW PLAYING")
+
+    ;; LINE
+    (label
+      :class "music-line"
+      :halign "end"
+      :text "────────────────────")
+
+    ;; SONG
+    (label
+      :class "music-title"
+      :halign "end"
+      :text music_title)
+
+    ;; ARTIST
+    (label
+      :class "music-artist"
+      :halign "end"
+      :text music_artist)
+
+    ;; CONTROLS
+    (box
+      :class "music-controls"
+      :orientation "h"
+      :halign "end"
+      :spacing 22
+
+      (button
+        :class "music-button"
+        :onclick "playerctl previous"
+        "‹")
+
+      (button
+        :class "music-button play-button"
+        :onclick "playerctl play-pause"
+        :text "❚❚")
+
+      (button
+        :class "music-button"
+        :onclick "playerctl next"
+        "›")
+    )
+  )
+)

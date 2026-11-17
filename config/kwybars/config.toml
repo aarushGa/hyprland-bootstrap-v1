@@ -1,0 +1,67 @@
+# Example Kwybars config
+# If you do not create a config file, Kwybars already uses these built-in defaults
+
+[overlay]
+monitor_mode = "primary"
+layer = "bottom"
+position = "bottom"
+full_length = true
+height = 250 
+anchor_margin = 20
+margin_left = 0
+margin_right = 0
+fade_in_ms = 180
+fade_out_ms = 350
+
+# Optional per-monitor overrides. When any [[overlay.outputs]] entries are
+# present, they replace monitor_mode/monitors selection.
+# [[overlay.outputs]]
+# monitor = "DP-1"
+# position = "bottom"
+# height = 180
+#
+# [overlay.outputs.visualizer]
+# layout = "wave"
+# wave_glow = true
+# color_mode = "solid"
+# color_rgba = "rgba(255, 255, 255, 0.34)"
+#
+# [[overlay.outputs]]
+# monitor = "HDMI-A-1"
+# enabled = false
+
+[visualizer]
+layout = "line"
+
+bars = 180         # 64–96 looks good on a 1920px monitor
+bar_width = 6
+gap = 4
+
+bar_corner_radius = 0
+
+framerate = 60
+
+color_mode = "solid"
+color_rgba = "rgba(255, 255, 255, 0.34)"
+
+[image_overlay]
+enabled = false
+path = ""
+opacity = 1.0
+fit = "contain"
+width = 0
+height = 0
+offset_x = 0
+offset_y = 0
+
+[daemon]
+enabled = true
+poll_interval_ms = 90
+activity_threshold = 0.035
+activate_delay_ms = 180
+deactivate_delay_ms = 2200
+stop_on_silence = true
+notify_on_error = true
+notify_cooldown_seconds = 45
+overlay_command = "kwybars-overlay"
+overlay_args = []
